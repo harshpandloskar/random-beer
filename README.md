@@ -1,2 +1,2 @@
-# random-beer
+# random-beer-app
 Created with CodeSandbox
