@@ -14,9 +14,6 @@ export default function Navbar() {
           <img src="/white-home-icon.png" alt="TapApp-homepage" />
         </Link>
       </div>
-      <Link to={"/beers"} className="button">
-        Beers
-      </Link>
     </div>
   );
 }
