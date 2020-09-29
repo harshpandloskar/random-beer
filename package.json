@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "random-beer-app",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "for beer lovers",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "axios": "0.20.0",
