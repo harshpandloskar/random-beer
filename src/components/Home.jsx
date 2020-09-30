@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Home.scss";
-import RandomBeer from "./RandomBeer";
-// import AnotherRandomBeer from "./AnotherRandomBeer";
-import { array } from "prop-types";
 
 export default function Home() {
   return (
