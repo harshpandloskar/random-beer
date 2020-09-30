@@ -85,21 +85,21 @@ React(react-router, Hooks, react-axios), ES6, HTML, CSS, BreweryDB API
 
 ## To Do
 
-Below is a list of improvements that could be made to the app and I intend to develop and work more on this project to add more features by end of October 2020.
+    Below is a list of improvements that could be made to the app and I intend to develop and work more on this project to add more features by end of October 2020.
 
-Code Grouping and Duplication: I am conscious that I have some code duplications but it was solely due to time constraint. At the last moment, I decided to add an extra feature i.e 'Brewires Button'.
+    Code Grouping and Duplication: I am conscious that I have some code duplications but it was solely due to time constraint. At the last moment, I decided to add an extra feature i.e 'Brewires Button'.
 
-I intend to group the code keeping the API's calls in another file and render it to the required component which will also reduce the code repetition and same for the CSS of the whole app.
+    I intend to group the code keeping the API's calls in another file and render it to the required component which will also reduce the code repetition and same for the CSS of the whole app.
 
-Route Switch : to conditionally render the first child that matches the path location example /guiness will redirect to beer/guiness/id which is the beer information page and to and to handle unwanted/no path location to 404 page.
+    Route Switch : to conditionally render the first child that matches the path location example /guiness will redirect to beer/guiness/id which is the beer information page and to and to handle unwanted/no path location to 404 page.
 
-Testing: the app could have been built using TDD, this could make the code more maintainable, extensible and create a focus on the goal of the project. At very least, more unit tests should be implemented to make the app more robust.
+    Testing: the app could have been built using TDD, this could make the code more maintainable, extensible and create a focus on the goal of the project. At very least, more unit tests should be implemented to make the app more robust.
 
-Cross Browser Testing: the app has not been testing across all browsers.
+    Cross Browser Testing: the app has not been testing across all browsers.
 
-Responsive Testing: although efforts have been made to ensure the app is responsive, these have not been extensively tested outside the Chrome Dev tools.
+    Responsive Testing: although efforts have been made to ensure the app is responsive, these have not been extensively tested outside the Chrome Dev tools.
 
-UI Design: The app would benefit from more time spent on designing the UI. some example back button,header and effects such as hover etc.
+    UI Design: The app would benefit from more time spent on designing the UI. some example back button,header and effects such as hover etc.
 
 Only for personal project development: I am going to add 3 more tabs for listing all beers in the world, google map location for the breweries, and finally types of beers/categories and their information.
 
