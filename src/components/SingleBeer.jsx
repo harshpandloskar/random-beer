@@ -24,8 +24,6 @@ class SingleBeer extends Component {
             this.setState({
                 beer: res.data.data
             })
-            console.log(this.state.beer);
-            console.log( "data is on single beer info page " + this.state.beer.id)
         })
         .catch((err)=> {
             console.log( "Error")
@@ -35,7 +33,6 @@ class SingleBeer extends Component {
     }
     render () { 
         let beer=this.state.beer    
-        console.log( "data is on single beer  " + this.state.beer.id)
         if(beer) {
         return (
             <div>
@@ -78,7 +75,7 @@ class SingleBeer extends Component {
         } else {
         return (
             <div>
-                <h2>Loading...</h2>
+                <h2>Loading Error</h2>
             </div>
         )
         }

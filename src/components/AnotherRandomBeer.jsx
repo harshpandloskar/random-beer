@@ -11,8 +11,8 @@ class AnotherRandomBeer extends Component {
         beer:[]
     }
     this.getSingleBeer=this.getSingleBeer.bind(this);
-    // this.handleBack=this.handleBack.bind(this)
-	}
+    }
+    
     componentDidMount() {
         this.getSingleBeer();
     }
@@ -26,20 +26,12 @@ class AnotherRandomBeer extends Component {
             this.setState({
                 beer: res.data.data
             })
-        //  for debug or testing
-        //  console.log(this.state.beer);
-        //  console.log(this.state.beer.id);
-        //  console.log(this.state); 
         })
         .catch((err)=> {
             console.log( "Error")
         })
-
     }
-    // handleBack() {
-    // this.props.history.goback()
-    // }
-   
+
     render () { 
         let beer=this.state.beer    
         if(beer) {
@@ -47,7 +39,7 @@ class AnotherRandomBeer extends Component {
             <div className="random-beer-page">
                {/* This below button loads random beer info on the same page */}
                {/* <button onClick={this.getSingleBeer}>Show Another Beer</button> */}
-                <button onClick={this.props.history.goBack}>Go back</button>
+                <button className="go-back-button" onClick={this.props.history.goBack}>Go back</button>
                 <div className="beer-img-detail">
                     <h1>{beer.name}</h1>  
                     {beer.style ? (
@@ -61,7 +53,7 @@ class AnotherRandomBeer extends Component {
                             </div>         
                         </div>
                     ):(
-                        <h2>Loading...</h2>
+                        <h2>Loading beer information...</h2>
                     )}
                     <div className="beers-img">
                         {beer.labels ? (      
@@ -86,7 +78,7 @@ class AnotherRandomBeer extends Component {
         } else {
         return (
             <div>
-                <h2>Loading...</h2>
+                <h2>Loading error</h2>
             </div>
         )
         }

@@ -112,7 +112,7 @@ class SingleBrewery extends Component {
         } else {
         return (
             <div>
-                <h2>Loading...</h2>
+                <h2>Loading error</h2>
             </div>
         )
     }

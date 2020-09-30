@@ -50,7 +50,23 @@ button {
         }
    }
 }
-
+.go-back-button {
+margin-right: 92%;
+width: 130px;
+background-color:#ffb700ec;
+border-color: rgba(255, 211, 99, 0.773);
+border-radius: 8px;
+color:#240603b9;
+font-size: 1em;
+font-weight: 550;
+float: left;
+@media screen 
+and (min-width: 300px)
+and (max-width: 650px) { 
+      width: 100%;
+      font-size: 0.8em;
+   }
+}
 .beer-img-detail {
   display: flex;
   flex-direction: column;

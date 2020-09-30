@@ -7,6 +7,7 @@
   height:100vh;
   background-repeat: no-repeat;
   background-size: cover;
+
   .scrollbar {
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@
     background: rgba(255, 255, 255, 0.800);
     border-radius: 10px;
     overflow-y: scroll;
+
     .force-overflow {
       min-height: 40px;
     }
@@ -27,6 +29,7 @@
           margin-left:2px;
     }
   }
+
   #style-2::-webkit-scrollbar-track {
       border-radius: 10px;
   }
@@ -34,6 +37,7 @@
   #style-2::-webkit-scrollbar {
       width: 12px;
   }
+  
   #style-2::-webkit-scrollbar-thumb {
       border-radius: 10px;
       background-color: #ffb700ec;
