@@ -40,7 +40,7 @@
 
 ## Stack
 
-React(react-router, Hooks, react-axios), ES6, HTML, CSS, BreweryDB API
+React(react-router, react-axios), ES6, HTML, CSS, BreweryDB API
 
 ## Content
 
