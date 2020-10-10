@@ -1,3 +1,4 @@
+@import "./Common.scss";
 .nav-buttons {
    display: inline;
    flex-direction: row;
@@ -34,7 +35,7 @@
       text-decoration: none;
       padding: 1.2% 2.6% 1.2% 2.6%;
       margin: 1.5% 0 1% 6%;
-      background-color:#ffb700ec;
+      background-color:$yellowColour;
       border-color: rgba(255, 211, 99, 0.773);
       border-radius: 5px;
       color:#240603b9;

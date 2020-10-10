@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
+
 import '../styles/RandomBeer.scss';
 import axios from 'axios';
 
@@ -40,9 +41,11 @@ class RandomBeer extends Component {
                   <h1>The Random Beer App!</h1>
                     <div>
                      {/* future implementation - <Link to={`/AnotherRandomBeer/${beer.name}/${beer.id}`}> */}
-                    <Link to={`/AnotherRandomBeer/${beer.id}`}>
+                     {/* future implementation - loads random beer info on the same page */}
+                     <button onClick={this.getSingleBeer}>Show Another Beer</button>
+                    {/* <Link to={`/AnotherRandomBeer/${beer.id}`}>
                        <button onClick={this.getSingleBeer}>Show Another Beer</button>
-                    </Link>         
+                    </Link>          */}
                     </div>
                 </div>
 
@@ -59,14 +62,14 @@ class RandomBeer extends Component {
                             </div>         
                         </div>
                     ):(
-                        <h2>Loading...</h2>
+                        <h2>Sláinte...</h2>
                     )}
                     <div className="beers-img">
                         {beer.labels ? (      
                             <img src={beer.labels.medium} alt="beer-label"/>
                         ) : (
                             <div>
-                               <img src="https://touch.daft.ie/static/images/fallbacks/no-image-size740x480.jpg" alt="not found" width="316" height="169"></img>
+                               <img src="https://res.cloudinary.com/harsh-pandloskar/image/upload/v1601468606/fallback-beer-image.jpg" alt="not found" width="316" height="169"></img>
                                <p>No Image available</p>
                             </div>
                         )}  
