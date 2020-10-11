@@ -7,6 +7,7 @@ import BreweryList from "./components/BreweryList";
 import SingleBrewery from "./components/SingleBrewery";
 import SingleBeer from "./components/SingleBeer";
 import RandomBeer from "./components/RandomBeer";
+import AnotherRandomBeer from "./components/AnotherRandomBeer";
 import {Route} from "react-router-dom";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/breweries/brewery/:id"  component={SingleBrewery}></Route>
           <Route exact path="/beer/:id"               component={SingleBeer}></Route>
           <Route exact path="/RandomBeer"             component={RandomBeer}></Route>
+          <Route exact path="/AnotherRandomBeer/:id"  component={AnotherRandomBeer}></Route>  
         </div>
       </div>
       <Footer/>
