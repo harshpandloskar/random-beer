@@ -8,18 +8,16 @@ a {
     text-decoration: none;
 }
 h2 {
-    margin-top: 15%;
+    font-size: 1.7em;
     font-size: 1.7em;
 }
 h3 {
-    margin:0 0 8%;
+    margin:0 0 2%;
 }
 h4 {
-  display: inline-table;
-  flex-direction: column;
-    font-size: 1.1em;
-    color:rgb(39, 23, 23);
-    margin: 7% 0;
+  font-size: 1.1em;
+  color:rgb(39, 23, 23);
+  margin: 0 0 4%;
 }
 select {
     -webkit-appearance: none;
@@ -38,7 +36,6 @@ select {
   }
   /* Custom Select */
   .select {
-    margin: -7%;
     position: relative;
     display: flex;
     width: 20em;
@@ -71,5 +68,4 @@ select {
   /* Transition */
   .select:hover::after {
     color: #f39c12;
-  } 
-}
+  }

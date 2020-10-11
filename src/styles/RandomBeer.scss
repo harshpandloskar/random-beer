@@ -1,44 +1,44 @@
 @import "./Common.scss";
-
 .random-beer-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-.random-beer-button {
-  display: flex;
-  flex-direction: row;
-  border-style: solid;
-  border-color: rgb(180, 178, 178);
-  border-radius: 8px;
-  height: 95px;
-   width: 712px;
-   padding-left: 2.9%;
-   margin-top: 1%;
- 
-h1 {
-  font-size: 2.3em;
-  font-weight: 800;
-  @media screen 
-  and (min-width: 300px)
-  and (max-width: 700px) { 
-      font-size: 2.5em;
+  
+  .random-beer-box {
+    display: inline-block;
+    border-style: solid;
+    border-color: rgb(180, 178, 178);
+    border-radius: 8px;
+    padding: 2% 4%;
+    margin-top: 1%;
+    @media screen and (min-width: 300px) and (max-width: 700px) {
+      padding: 6% 4%;
+    }
+  h1 {
+    font-size: 2.3em;
+    font-weight: 800;
+    float: left;
+    margin: 0px;
+    @media screen and (min-width: 300px) and (max-width: 700px) { 
+      font-size: 1.8em;
       margin: 0 10%;
+    }
+  }
+  button {
+      background-color: $yellowColour;
+      border-color: rgba(255, 211, 99, 0.773);
+      border-radius: 8px;
+      color:#240603b9;
+      font-size: 1.1em;
+      font-weight: 550;
+      padding: 10px 15px;
+      margin-left: 30px;
+      cursor: pointer;
+       @media screen and (min-width: 300px) and (max-width: 650px) { 
+        font-size: 0.8em;
+        margin-left: 0px;
+        margin-top: 10px;
+      }
+    }
   }
 }
-button {
-     width: 190px;
-     padding: 7% 2% 7% 2%;
-     margin: 10% 0% 10% 50%;
-     background-color: $yellowColour;
-     border-color: rgba(255, 211, 99, 0.773);
-     border-radius: 8px;
-     color:#240603b9;
-     font-size: 1.1em;
-     font-weight: 550;
-     float: left;
-     @media screen 
-     and (min-width: 300px)
-     and (max-width: 650px) { 
            width: 100%;
            font-size: 0.8em;
         }
