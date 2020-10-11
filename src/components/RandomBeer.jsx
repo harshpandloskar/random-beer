@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-
+import '../styles/Common.scss';
 import '../styles/RandomBeer.scss';
 import axios from 'axios';
 
@@ -49,14 +49,14 @@ class RandomBeer extends Component {
                     </div>
                 </div>
 
-                <div className="beer-img-detail">
+                <div className="beer-img-details">
                     <h1>{beer.name}</h1>  
                     {beer.style ? (
                         <div>
                             <p><b>Style: </b>{beer.style.name}</p>
                             <p><b>Brewed by:</b>&nbsp;
                             <Link to={`/breweries/brewery/${beer.breweries[0].id}`}>{beer.breweries[0].name}</Link> in {beer.breweries[0].locations[0].country.displayName}</p>
-                            <div className="abv-ibuu">
+                            <div>
                                 <p><b>ABV:</b> {beer.abv}%</p>
                                 <p><b>IBU:</b> {beer.style.ibuMin} - {beer.style.ibuMax}</p>  
                             </div>         
@@ -64,7 +64,7 @@ class RandomBeer extends Component {
                     ):(
                         <h2>Sláinte...</h2>
                     )}
-                    <div className="beers-img">
+                    <div className="beer-img">
                         {beer.labels ? (      
                             <img src={beer.labels.medium} alt="beer-label"/>
                         ) : (
@@ -75,7 +75,7 @@ class RandomBeer extends Component {
                         )}  
                     </div> 
                 </div>
-                <div className="beers-description">
+                <div className="beer-description">
                     {beer.style ? (
                             <p>{beer.style.description}</p>
                     ):(

@@ -1,11 +1,12 @@
+
 @import "./Common.scss";
+
 .nav-buttons {
-   display: inline;
+   display: flex;
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   height: 10%;
-   width: 69%;
+   width: 55%;
    @media screen 
    and (min-width: 300px)
    and (max-width: 650px) { 
@@ -23,8 +24,7 @@
       width: 70%
    }
    .home {
-      width: 55%;
-     
+      width: auto;
       @media screen 
       and (min-width: 300px)
       and (max-width: 650px) { 
@@ -33,15 +33,15 @@
    } 
    .button {
       text-decoration: none;
-      padding: 1.2% 2.6% 1.2% 2.6%;
-      margin: 1.5% 0 1% 6%;
-      background-color:$yellowColour;
+      padding: 2%;
+      margin: 2% 0 2% 0;
+      width: 25%;
+      background-color: $yellowColour;
       border-color: rgba(255, 211, 99, 0.773);
       border-radius: 5px;
       color:#240603b9;
       font-size: 1em;
-      font-weight: 500;
-      float: left;
+      font-weight: 700;
       @media screen 
       and (min-width: 300px)
       and (max-width: 650px) { 
@@ -50,9 +50,7 @@
          }
     }
    img {
-      width: 10.5%;
-      margin: 1.5% 0 0 0;
-      float: left;
+      width: 18%;
       @media screen 
       and (min-width: 300px)
       and (max-width: 650px) { 

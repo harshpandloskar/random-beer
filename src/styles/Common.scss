@@ -1,2 +1,27 @@
 /*Variable for common css */
 $yellowColour : #ffb700ec;
+
+/*CSS for Single beer  and Randdom beer page*/
+.beer-img-details {
+    a {
+      color: rgb(39, 23, 23);
+      text-decoration: underline;
+    }
+    .beer-img {
+      margin: 2%;
+      img {
+       height: 256px;
+        box-shadow: 6px 6px 2px $yellowColour;
+        border-radius: 11px;
+      }
+    }
+  }
+  .beer-description {
+    text-align: justify;
+    margin: 1% 5% 5% 5%;
+    p {
+        margin:0 0 1% 0;
+        line-height: 1.5em;
+    }
+  }
+  /*CSS for Single beer and Randkom beer pagedetails ends*/
