@@ -1,18 +1,16 @@
+@import "./styles/common";
+
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include flexColumnCenter();
   text-align: center;
   background-image: url(https://res.cloudinary.com/harsh-pandloskar/image/upload/v1601038891/background_randombeerapp.jpg);
+  /*View port width A percentage of the full viewport height which i have set to 100 which takes 100 % on the window*/
   height:100vh;
-  background-repeat: no-repeat;
   background-size: cover;
 
   .scrollbar {
-    display: flex;
-    flex-direction: column;
+    @include flexColumnCenter();
     justify-content: flex-start;
-    align-items: center;
     width: 70%;
     height: 82vh;
     background: rgba(255, 255, 255, 0.800);
@@ -35,11 +33,11 @@
   }
 
   #style-2::-webkit-scrollbar {
-      width: 12px;
+      width: 8px;
   }
   
   #style-2::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: #ffb700ec;
+      background-color: $yellowColour;
   }
 }
