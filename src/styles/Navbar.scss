@@ -2,10 +2,7 @@
 @import "./Common.scss";
 
 .nav-buttons {
-   @include flexRowCenter()
-   flex-direction: row;
-   justify-content: space-between;
-   width: 55%;
+   @include flexRowCenter();
    width: 55%;
    @media screen 
    and (min-width: 300px)
@@ -32,16 +29,14 @@
       }
    } 
    .button {
+      @include buttons();
       text-decoration: none;
       padding: 2%;
       margin: 2% 0 2% 0;
       width: 25%;
-      background-color: $yellowColour;
-      border-color: rgba(255, 211, 99, 0.773);
-      border-radius: 5px;
-      color:#240603b9;
       font-size: 1em;
       font-weight: 700;
+      transition-duration: 0.4s;
       @media screen 
       and (min-width: 300px)
       and (max-width: 650px) { 
@@ -49,6 +44,11 @@
             font-size: 0.8em;
          }
     }
+    .button:hover {
+      background-color: #ffb700b6;
+      color: white;
+    }
+    
    img {
       width: 18%;
       @media screen 

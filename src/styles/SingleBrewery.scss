@@ -2,9 +2,8 @@
 @import "./Common.scss";
 
 .single-brew-page {
-    @include flexColumnCenter()
+    @include flexColumnCenter();
     justify-content: flex-start;
-    align-items: center;
     h1 {
         margin: 3% 0 1% 0;
     }
@@ -16,7 +15,7 @@
         text-decoration: underline;
       }
     .brew-img-details {
-        @include flexColumnCenter()
+        @include flexColumnCenter();
         .brew-img {
             margin-top: 1%;;
             img {
@@ -26,7 +25,7 @@
             }
         }
         .brew-description {
-            @include flexColumnCenter()
+            @include flexColumnCenter();
             margin: 1% 5% 1% 5%;
             padding: 0 1%;
             @media screen 
@@ -36,7 +35,6 @@
             }
             p {
                 line-height: 1.7em;
-                margin: 3% 0 5% 0;
             }
         }
     }
@@ -58,22 +56,4 @@
         }
     }
 }
-}
-        -moz-column-count:2;
-        -webkit-column-count:2;  
-        width: 85%;
-        margin: 0 0 2% 0;
-        text-align: left;
-        @media screen 
-        and (min-width: 300px)
-        and (max-width: 650px) { 
-            width: 90%;
-        }
-        h5 {
-            margin: 0 0 3% 0;
-        }
-        a {
-            margin:0;
-        }
-    }
 }
