@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
+import '../styles/Common.scss';
 import '../styles/RandomBeer.scss';
 import axios from 'axios';
 
@@ -36,43 +37,44 @@ class RandomBeer extends Component {
         if(beer) {
         return (
             <div className="random-beer-page">
-                <div className="random-beer-button">
+                <div className="random-beer-box">
                   <h1>The Random Beer App!</h1>
-                    <div>
                      {/* future implementation - <Link to={`/AnotherRandomBeer/${beer.name}/${beer.id}`}> */}
-                    <Link to={`/AnotherRandomBeer/${beer.id}`}>
+                     {/* future implementation - loads random beer info on the same page */}
+                     <button class="buttonHover" onClick={this.getSingleBeer}>Show Another Beer</button>
+                    {/* <Link to={`/AnotherRandomBeer/${beer.id}`}>
                        <button onClick={this.getSingleBeer}>Show Another Beer</button>
-                    </Link>         
-                    </div>
+                    </Link>          */}
                 </div>
 
-                <div className="beer-img-detail">
-                    <h1>{beer.name}</h1>  
-                    {beer.style ? (
-                        <div>
-                            <p><b>Style: </b>{beer.style.name}</p>
-                            <p><b>Brewed by:</b>&nbsp;
-                            <Link to={`/breweries/brewery/${beer.breweries[0].id}`}>{beer.breweries[0].name}</Link> in {beer.breweries[0].locations[0].country.displayName}</p>
-                            <div className="abv-ibuu">
-                                <p><b>ABV:</b> {beer.abv}%</p>
-                                <p><b>IBU:</b> {beer.style.ibuMin} - {beer.style.ibuMax}</p>  
-                            </div>         
-                        </div>
-                    ):(
-                        <h2>Loading...</h2>
-                    )}
-                    <div className="beers-img">
+                <div className="beer-img-details">
+                    <div className="beer-img">
                         {beer.labels ? (      
                             <img src={beer.labels.medium} alt="beer-label"/>
                         ) : (
                             <div>
-                               <img src="https://touch.daft.ie/static/images/fallbacks/no-image-size740x480.jpg" alt="not found" width="316" height="169"></img>
-                               <p>No Image available</p>
+                               <img src="https://res.cloudinary.com/harsh-pandloskar/image/upload/v1601468606/fallback-beer-image.jpg" alt="Not found" width="300" height="220"></img>
                             </div>
                         )}  
-                    </div> 
+                    </div>
+                    <div class="beer-details">
+                        <h1>{beer.name}</h1>  
+                        {beer.style ? (
+                            <div>
+                                <p><b>Style: </b>{beer.style.name}</p>
+                                <p><b>Brewed by:</b>&nbsp;
+                                <Link to={`/breweries/brewery/${beer.breweries[0].id}`}>{beer.breweries[0].name}</Link> in {beer.breweries[0].locations[0].country.displayName}</p>
+                                <div>
+                                    <p><b>Alcohol by volume (ABV):</b> {beer.abv}%</p>
+                                    <p><b>International bittering unit (IBU):</b> {beer.style.ibuMin} - {beer.style.ibuMax}</p>  
+                                </div>         
+                            </div>
+                        ):(
+                            <h3>Loading your Beer Information..Sláinte !!</h3>
+                        )}
+                    </div>
                 </div>
-                <div className="beers-description">
+                <div className="beer-description">
                     {beer.style ? (
                             <p>{beer.style.description}</p>
                     ):(

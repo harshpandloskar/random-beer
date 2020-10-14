@@ -51,7 +51,7 @@ class SingleBrewery extends Component {
     render () {
         let Beers;
         if(this.state.beers.length === 0){
-            Beers=<h2>Loading...</h2>
+            Beers=<h3>Loading your Beer Information..Sláinte !!</h3>
         } 
         else if(this.state.beers.length === 1){
             Beers=<h2>The brewery produces <u>{this.state.beers.length}</u> beer: </h2>
@@ -64,7 +64,6 @@ class SingleBrewery extends Component {
         if(brew && this.state.beers){
         return (
             <div className="single-brew-page">
-                <button onClick={this.props.history.goBack}>Go back</button>
                 <div>
                     <h1>{brew.name}</h1>
                     {brew.established ? (

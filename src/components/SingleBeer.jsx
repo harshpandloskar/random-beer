@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-import '../styles/SingleBeer.scss';
-import axios from 'axios';;
+import '../styles/Common.scss';
+import axios from 'axios';
 
 
 class SingleBeer extends Component {
@@ -36,32 +36,32 @@ class SingleBeer extends Component {
         if(beer) {
         return (
             <div>
-                <button onClick={this.props.history.goBack}>Go back</button>
                 <div className="beer-img-details">
-                    <h1>{beer.name}</h1>  
-                    {beer.style ? (
-                        <div>
-                            <p><b>Style: </b>{beer.style.name}</p>
-                            <p><b>Brewed by:</b>&nbsp;
-                            <Link to={`/breweries/brewery/${beer.breweries[0].id}`}>{beer.breweries[0].name}</Link> in {beer.breweries[0].locations[0].country.displayName}</p>
-                            <div className="abv-ibu">
-                                <p><b>ABV:</b> {beer.abv}%</p>
-                                <p><b>IBU:</b> {beer.style.ibuMin} - {beer.style.ibuMax}</p>  
-                            </div>         
-                        </div>
-                    ):(
-                        <h2>Loading...</h2>
-                    )}
                     <div className="beer-img">
                         {beer.labels ? (      
                             <img src={beer.labels.medium} alt="beer-label"/>
                         ) : (
                             <div>
-                            <img src="https://touch.daft.ie/static/images/fallbacks/no-image-size740x480.jpg" alt="not found" width="316" height="169"></img>
-                            <p>No Image available</p>
+                            <img src="https://res.cloudinary.com/harsh-pandloskar/image/upload/v1601468606/fallback-beer-image.jpg" alt="not found" width="316" height="169"></img>
                             </div>
                         )}  
-                    </div> 
+                    </div>
+                    <div class="beer-details">
+                        <h1>{beer.name}</h1>  
+                        {beer.style ? (
+                            <div>
+                                <p><b>Style: </b>{beer.style.name}</p>
+                                <p><b>Brewed by:</b>&nbsp;
+                                <Link to={`/breweries/brewery/${beer.breweries[0].id}`}>{beer.breweries[0].name}</Link> in {beer.breweries[0].locations[0].country.displayName}</p>
+                                <div>
+                                    <p><b>ABV:</b> {beer.abv}%</p>
+                                    <p><b>IBU:</b> {beer.style.ibuMin} - {beer.style.ibuMax}</p>  
+                                </div>         
+                            </div>
+                        ):(
+                            <h3>Loading your Beer Information..Sláinte !!</h3>
+                        )}
+                    </div>
                 </div>
                 <div className="beer-description">
                     {beer.style ? (

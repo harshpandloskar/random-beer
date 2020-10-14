@@ -86,7 +86,7 @@ class BreweryList extends Component {
     render() {
         let BreweriesCountry;
         if(!this.state.select.selectedCode){
-            BreweriesCountry = <h2>Breweries from a all countries</h2>
+            BreweriesCountry = <h2>Breweries from all countries</h2>
         }
         else {
             BreweriesCountry = <h2>Breweries from {this.state.select.selectedCode}</h2>
@@ -111,11 +111,13 @@ class BreweryList extends Component {
                     </select>
                 </div>
                 {BreweriesCountry}
+                <div class="brewery-list">
                     {this.state.breweries.map((item) => (
                         <div key={item.id}>
                         <Link to={`breweries/brewery/${item.breweryId}`}> <h4>{item.brewery.name}</h4></Link>
                         </div>
                     ))}
+                </div>
             </div>    
         )
     }
